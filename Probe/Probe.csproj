@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D19B2D43-3460-4EC1-A4BE-3EACABC93FDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Probe</RootNamespace>
+    <AssemblyName>Probe</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\we\Desktop\sc2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\probe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>04180CBD010A9141CB44FB11945BF4E5147BE351</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>sc2keywatcher_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoUpdate\AutoUpdater.cs" />
+    <Compile Include="AutoUpdate\AutoUpdateTask.cs" />
+    <Compile Include="BuildOrders\BuildOrderStep.cs" />
+    <Compile Include="BuildOrders\BuildOrderHandler.cs" />
+    <Compile Include="BuildOrders\BuildOrder.cs" />
+    <Compile Include="Engine\AsyncTaskProcessor.cs" />
+    <Compile Include="Engine\BulkUploadReplaysTask.cs" />
+    <Compile Include="Engine\ConnectionTask.cs" />
+    <Compile Include="Engine\SendGameTask.cs" />
+    <Compile Include="Engine\UpdateSessionActivity.cs" />
+    <Compile Include="Engine\UploadReplayTask.cs" />
+    <Compile Include="Estimators\BoostNotifier.cs" />
+    <Compile Include="FormLocalSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLocalSettings.Designer.cs">
+      <DependentUpon>FormLocalSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\GameTimeEventHandler.cs" />
+    <Compile Include="Engine\IAsyncTask.cs" />
+    <Compile Include="Game\RaceDetector.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\IToolController.cs" />
+    <Compile Include="Tools\SC2GearsController.cs" />
+    <Compile Include="Tools\SCFusionController.cs" />
+    <Compile Include="Tools\ToolManager.cs" />
+    <Compile Include="Tools\WebToolController.cs" />
+    <Compile Include="UIController.cs" />
+    <Compile Include="Utility\EventFileWatcher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utility\JTokenWrap.cs" />
+    <Compile Include="Utility\KeyboardLedControl.cs" />
+    <Compile Include="Utility\CustomEvents.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\GameClock.cs" />
+    <Compile Include="Utility\KeyboardEventsHandler.cs" />
+    <Compile Include="Utility\KeyList.cs" />
+    <Compile Include="Estimators\KeyEstimator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Estimators\RegularityEstimator.cs" />
+    <Compile Include="Estimators\RightClickWatcher.cs" />
+    <Compile Include="Game\UserSettings.cs" />
+    <Compile Include="Utility\KeysHelper.cs" />
+    <Compile Include="Utility\PriorityQueue.cs" />
+    <Compile Include="Utility\ReplayFileWatcher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Estimators\TapWatcher.cs" />
+    <Compile Include="Utility\ScreenMap.cs" />
+    <Compile Include="Utility\Speaker.cs" />
+    <Compile Include="Utility\UserActivityHook.cs" />
+    <Compile Include="Game\GameLog.cs" />
+    <Compile Include="Engine\Controller.cs" />
+    <Compile Include="WebClient\QueryString.cs" />
+    <Compile Include="WebClient\ServerConnection.cs" />
+    <Compile Include="WebClient\WebLayer.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLocalSettings.resx">
+      <DependentUpon>FormLocalSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="sc2keywatcher_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.jpg" />
+    <Content Include="eula.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\probe_dots1.ico" />
+    <None Include="Resources\probe_dots2.ico" />
+    <None Include="Resources\probe_dots3.ico" />
+    <None Include="Resources\probe_exclamation.ico" />
+    <None Include="Resources\link.png" />
+    <None Include="Resources\probe_16.png" />
+    <None Include="Resources\restart.png" />
+    <None Include="Resources\connect.png" />
+    <None Include="Resources\tools.png" />
+    <None Include="Resources\sc2gears_16.png" />
+    <None Include="Resources\door_16.png" />
+    <None Include="Resources\sc2fusion_16.png" />
+    <None Include="Resources\splash.png" />
+    <EmbeddedResource Include="ICSharpCode.SharpZipLib.dll" />
+    <EmbeddedResource Include="Newtonsoft.Json.dll" />
+    <None Include="Resources\gear.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\folder_add.png" />
+    <None Include="Resources\sc2.bmp" />
+    <None Include="Resources\sc2.png" />
+    <None Include="Resources\volume.png" />
+    <Content Include="Sounds\notify minimap.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\notify production.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\notify resources.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\recording completed.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\recording paused.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\recording started.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="probe.ico" />
+    <None Include="Resources\probe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{76831DCF-AF19-43D8-A1CC-B7C29E8151CF}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Overlays\Overlays.csproj">
+      <Project>{AA75C5E1-9D08-4837-82F9-C5FA67F6159D}</Project>
+      <Name>Overlays</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Replay\Replay.csproj">
+      <Project>{E0E59A7C-EB48-4CA0-BF79-89B0322294CD}</Project>
+      <Name>Replay</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_BuildVersioningStyle="None.None.YearDayOfYear.Increment" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UpdateAssemblyVersion="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

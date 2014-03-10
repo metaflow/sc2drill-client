@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Overlays.NotificationPointer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:Overlays" mc:Ignorable="d" 
+             d:DesignHeight="61" d:DesignWidth="61" Loaded="UserControl_Loaded">
+    <Grid Name="containerGrid" Width="60" Height="60">
+        <my:DragDrop x:Name="dragDropItem" Width="16" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" DragFinished="DragDropItem_DragFinished" Opacity="0.3" Panel.ZIndex="1" />
+        <Image Height="60" HorizontalAlignment="Left" Name="notifyImage" Source="/Overlays;component/Images/exclamation.png" Stretch="Fill" VerticalAlignment="Top" Visibility="Visible" Width="60"  MouseEnter="shyControl" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Overlays.ResourcesState"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:Overlays" mc:Ignorable="d" 
+             d:DesignHeight="193" d:DesignWidth="226" Loaded="UserControl_Loaded">
+    <Grid Name="containerGrid" Width="227" Height="131">
+        <my:DragDrop x:Name="dragDropItem" Width="16" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" DragFinished="DragDropItem_DragFinished" Opacity="0.3" Panel.ZIndex="1" />
+        <Label Content="Label" Height="28" HorizontalAlignment="Left" Margin="16,0,0,0" Name="label1" VerticalAlignment="Top" FontWeight="Bold" Foreground="Red" FontFamily="Consolas" Visibility="Hidden" />
+        <Image Margin="0,22,0,0" Name="imageMinerals" Stretch="None" VerticalAlignment="Top" Source="/Overlays;component/Images/bar-minerals.png" HorizontalAlignment="Left" MouseEnter="shyControl" />
+        <Image HorizontalAlignment="Left" Margin="0,48,0,0" Name="imageGas" Source="/Overlays;component/Images/bar-gas.png" Stretch="None" VerticalAlignment="Top"  MouseEnter="shyControl" />
+        <Image HorizontalAlignment="Left" Margin="0,74,0,0" Name="imageSupply" Source="/Overlays;component/Images/bar-supply.png" Stretch="None" VerticalAlignment="Top"  MouseEnter="shyControl" />
+        <Image HorizontalAlignment="Left" Margin="97,95,0,0" Name="imageSupplyHelper" Source="/Overlays;component/Images/bar-supply-helper.png" Stretch="None" VerticalAlignment="Top" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="Overlays.MainWindow"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Overlays="clr-namespace:Overlays" WindowStyle="None"
+        AllowsTransparency="True"
+        Background="{DynamicResource WindowBackground}" Topmost="True" ShowInTaskbar="False" WindowState="Maximized" ShowActivated="True" ResizeMode="NoResize"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <SolidColorBrush x:Key="WindowBackground" 
+                        Color="White"
+                        Opacity="0.0"/>
+    </Window.Resources>
+    <Grid>
+        <Overlays:ProbeStateControl x:Name="stateIndicator" Width="32" Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,2,0,0" />
+        <Overlays:BOFrame Visibility="Hidden" x:Name="boFrame" Margin="3,35,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Overlays:HotKeyHideBar x:Name="buttonsOverlay" Visibility="Hidden" Width="317" Height="192" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Margin="0,0,20,15" />
+        <Overlays:NotificationPointer HorizontalAlignment="Left" Margin="21,146,0,0" x:Name="mapNotification" VerticalAlignment="Top" Tag="map" Visibility="Hidden" />
+        <Overlays:NotificationPointer HorizontalAlignment="Left" Margin="242,53,0,0" x:Name="resourcesNotification" Tag="resources" VerticalAlignment="Top" Visibility="Hidden" />
+        <Overlays:NotificationPointer HorizontalAlignment="Left" Margin="21,53,0,0" x:Name="boostNotification" Tag="boost" VerticalAlignment="Top" Visibility="Hidden" />
+        <Overlays:ResourcesState HorizontalAlignment="Left" Margin="109,146,0,0" x:Name="resourcesState" VerticalAlignment="Top" Visibility="Hidden" />
+    </Grid>
+</Window>

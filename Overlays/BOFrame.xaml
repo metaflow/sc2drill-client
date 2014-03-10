@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Overlays.BOFrame"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="186" d:DesignWidth="300" xmlns:my="clr-namespace:Overlays" Loaded="UserControl_Loaded">
+    <Grid>
+        <my:DragDrop x:Name="dragDropItem" Width="16" Height="16" Margin="0,2,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" DragFinished="DragDropItem_DragFinished" Opacity="0.3" />
+        <StackPanel Margin="18,0,0,0" Name="boStack" IsHitTestVisible="False" VerticalAlignment="Top" DataContext="{Binding}" HorizontalAlignment="Left" MinWidth="50" MinHeight="50"  MouseEnter="shyControl" >
+        </StackPanel>
+    </Grid>
+</UserControl>

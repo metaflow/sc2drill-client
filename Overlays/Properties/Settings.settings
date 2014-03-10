@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Overlays.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HideHotkeyWindowWidth" Provider="Probe.Common.CrossVersionSettingProvider" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">317</Value>
+    </Setting>
+    <Setting Name="HideHotkeyWindowHeight" Provider="Probe.Common.CrossVersionSettingProvider" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">193</Value>
+    </Setting>
+    <Setting Name="BOMargin" Provider="Probe.Common.CrossVersionSettingProvider" Type="System.Windows.Thickness" Scope="User">
+      <Value Profile="(Default)">0,0,0,0</Value>
+    </Setting>
+    <Setting Name="CallUpgrade" Provider="Probe.Common.CrossVersionSettingProvider" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MapNotificationMargin" Provider="Probe.Common.CrossVersionSettingProvider" Type="System.Windows.Thickness" Scope="User">
+      <Value Profile="(Default)">0,0,0,0</Value>
+    </Setting>
+    <Setting Name="ResourcesNotificationMargin" Provider="Probe.Common.CrossVersionSettingProvider" Type="System.Windows.Thickness" Scope="User">
+      <Value Profile="(Default)">0,0,0,0</Value>
+    </Setting>
+    <Setting Name="BoostNotificationMargin" Provider="Probe.Common.CrossVersionSettingProvider" Type="System.Windows.Thickness" Scope="User">
+      <Value Profile="(Default)">0,0,0,0</Value>
+    </Setting>
+    <Setting Name="ResourcesCaptureMargin" Provider="Probe.Common.CrossVersionSettingProvider" Type="System.Windows.Thickness" Scope="User">
+      <Value Profile="(Default)">0,0,0,0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
