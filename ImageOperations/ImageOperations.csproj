@@ -81,6 +81,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ImageProcessing\ImageProcessing.csproj">
+      <Project>{0EE43B19-3D57-488F-B0C1-58243B169FE9}</Project>
+      <Name>ImageProcessing</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Probe\Probe.csproj">
       <Project>{D19B2D43-3460-4EC1-A4BE-3EACABC93FDC}</Project>
       <Name>Probe</Name>

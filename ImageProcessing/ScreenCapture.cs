@@ -2,7 +2,7 @@
 using System.Drawing;
 using CaptureScreen;
 
-namespace Probe.Utility.ScreenCapture
+namespace ImageProcessing
 {
     public class ScreenCapture
     {

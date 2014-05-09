@@ -1,14 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
-using Probe.Utility.ScreenCapture;
+using ImageProcessing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace sc2test
 {
-    
-    
     /// <summary>
     ///This is a test class for ImageProcessorTest and is intended
     ///to contain all ImageProcessorTest Unit Tests

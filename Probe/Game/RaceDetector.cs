@@ -6,9 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using ImageProcessing;
 using Probe.Common;
 using Probe.Utility;
-using Probe.Utility.ScreenCapture;
+
 
 namespace Probe.Game
 {

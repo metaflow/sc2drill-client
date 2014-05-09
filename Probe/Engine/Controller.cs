@@ -6,6 +6,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using ImageProcessing;
 using Newtonsoft.Json.Linq;
 using Overlays;
 using Probe.BuildOrders;
@@ -14,7 +15,6 @@ using Probe.Estimators;
 using Probe.Game;
 using Probe.Replay;
 using Probe.Utility;
-using Probe.Utility.ScreenCapture;
 using Probe.WebClient;
 
 namespace Probe.Engine

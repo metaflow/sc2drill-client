@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probe", "Probe\Probe.csproj", "{D19B2D43-3460-4EC1-A4BE-3EACABC93FDC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9} = {0EE43B19-3D57-488F-B0C1-58243B169FE9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{A22E3AB5-B9C3-4FFB-BF9E-CCB8C98BB5E0}"
 EndProject
@@ -19,8 +22,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{76831DCF-AF19-43D8-A1CC-B7C29E8151CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Replay", "Replay\Replay.csproj", "{E0E59A7C-EB48-4CA0-BF79-89B0322294CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{76831DCF-AF19-43D8-A1CC-B7C29E8151CF} = {76831DCF-AF19-43D8-A1CC-B7C29E8151CF}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageOperations", "ImageOperations\ImageOperations.csproj", "{D72FE6D4-F605-45DB-9F0B-C4FA524895A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessing", "ImageProcessing\ImageProcessing.csproj", "{0EE43B19-3D57-488F-B0C1-58243B169FE9}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -105,6 +113,16 @@ Global
 		{D72FE6D4-F605-45DB-9F0B-C4FA524895A3}.Release|Mixed Platforms.Build.0 = Release|x86
 		{D72FE6D4-F605-45DB-9F0B-C4FA524895A3}.Release|x86.ActiveCfg = Release|x86
 		{D72FE6D4-F605-45DB-9F0B-C4FA524895A3}.Release|x86.Build.0 = Release|x86
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0EE43B19-3D57-488F-B0C1-58243B169FE9}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

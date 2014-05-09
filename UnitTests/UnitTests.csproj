@@ -139,6 +139,10 @@
       <Project>{76831DCF-AF19-43D8-A1CC-B7C29E8151CF}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ImageProcessing\ImageProcessing.csproj">
+      <Project>{0EE43B19-3D57-488F-B0C1-58243B169FE9}</Project>
+      <Name>ImageProcessing</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Overlays\Overlays.csproj">
       <Project>{AA75C5E1-9D08-4837-82F9-C5FA67F6159D}</Project>
       <Name>Overlays</Name>
