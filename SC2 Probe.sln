@@ -16,12 +16,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher", "Launcher\Launch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overlays", "Overlays\Overlays.csproj", "{AA75C5E1-9D08-4837-82F9-C5FA67F6159D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginsSandBox", "PluginsSandBox\PluginsSandBox.csproj", "{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SmallApps", "SmallApps", "{ADEFA813-78F7-4EDD-81A0-C85798A378B5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpponentDataMiner", "OpponentDataMiner\OpponentDataMiner.csproj", "{C4D83C18-07A0-4BBC-ABBD-F015D599958D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{76831DCF-AF19-43D8-A1CC-B7C29E8151CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Replay", "Replay\Replay.csproj", "{E0E59A7C-EB48-4CA0-BF79-89B0322294CD}"
@@ -81,26 +75,6 @@ Global
 		{AA75C5E1-9D08-4837-82F9-C5FA67F6159D}.Release|Mixed Platforms.Build.0 = Release|x86
 		{AA75C5E1-9D08-4837-82F9-C5FA67F6159D}.Release|x86.ActiveCfg = Release|x86
 		{AA75C5E1-9D08-4837-82F9-C5FA67F6159D}.Release|x86.Build.0 = Release|x86
-		{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}.Debug|x86.ActiveCfg = Debug|x86
-		{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}.Debug|x86.Build.0 = Debug|x86
-		{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}.Release|Any CPU.ActiveCfg = Release|x86
-		{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}.Release|Mixed Platforms.Build.0 = Release|x86
-		{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}.Release|x86.ActiveCfg = Release|x86
-		{A4ECFBC6-A804-4EBF-92AA-4F6259397E9E}.Release|x86.Build.0 = Release|x86
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D}.Debug|x86.ActiveCfg = Debug|x86
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D}.Debug|x86.Build.0 = Debug|x86
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D}.Release|Any CPU.ActiveCfg = Release|x86
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D}.Release|Mixed Platforms.Build.0 = Release|x86
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D}.Release|x86.ActiveCfg = Release|x86
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D}.Release|x86.Build.0 = Release|x86
 		{76831DCF-AF19-43D8-A1CC-B7C29E8151CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{76831DCF-AF19-43D8-A1CC-B7C29E8151CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76831DCF-AF19-43D8-A1CC-B7C29E8151CF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -134,8 +108,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C4D83C18-07A0-4BBC-ABBD-F015D599958D} = {ADEFA813-78F7-4EDD-81A0-C85798A378B5}
 	EndGlobalSection
 EndGlobal
