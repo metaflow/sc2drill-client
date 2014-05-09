@@ -29,8 +29,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.lTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLicense = new System.Windows.Forms.LinkLabel();
@@ -48,28 +46,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel1.Location = new System.Drawing.Point(-1, 228);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(79, 15);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "sc2drill.com";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // lTitle
-            // 
-            this.lTitle.AutoSize = true;
-            this.lTitle.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lTitle.Location = new System.Drawing.Point(75, 228);
-            this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(42, 15);
-            this.lTitle.TabIndex = 2;
-            this.lTitle.Text = "label1";
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -77,9 +53,10 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(401, 60);
             this.label1.TabIndex = 3;
-            this.label1.Text = "©2011, Mikhail Goncharov.\r\n\r\nStarCraft® II is a registered trademark of Blizzard " +
-                "Entertainment®\r\nProbe art by ";
+            this.label1.Text = "Project of Mikhail Goncharov\r\n\r\nStarCraft® II is a registered trademark of Blizza" +
+                "rd Entertainment®\r\nProbe art by ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // linkLabel2
             // 
@@ -97,12 +74,12 @@
             // 
             this.linkLicense.AutoSize = true;
             this.linkLicense.Font = new System.Drawing.Font("Georgia", 9F);
-            this.linkLicense.Location = new System.Drawing.Point(169, 249);
+            this.linkLicense.Location = new System.Drawing.Point(190, 249);
             this.linkLicense.Name = "linkLicense";
-            this.linkLicense.Size = new System.Drawing.Size(115, 15);
+            this.linkLicense.Size = new System.Drawing.Size(51, 15);
             this.linkLicense.TabIndex = 6;
             this.linkLicense.TabStop = true;
-            this.linkLicense.Text = "License agreement";
+            this.linkLicense.Text = "Github ";
             this.linkLicense.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLicense_LinkClicked);
             // 
             // AboutBox
@@ -115,8 +92,6 @@
             this.Controls.Add(this.linkLicense);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lTitle);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -139,8 +114,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label lTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLicense;

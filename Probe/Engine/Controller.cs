@@ -257,14 +257,6 @@ namespace Probe.Engine
         {
             if (!GameClock.Instance.Started) return;
             Stop();
-            //check if we should submit a game
-            var s = UserSettings.Instance;
-            if (((s.Production.Type & KeyWatcherSettings.WatchType.Measure) != 0)
-                || ((s.Map.Type & KeyWatcherSettings.WatchType.Measure) != 0)
-                || ((s.Resources.Type & KeyWatcherSettings.WatchType.Measure) != 0))
-            {
-                _tasks.AddUnique(new SendGameTask());
-            }
             CustomEvents.Instance.Add(EventsType.RecordingCompleted);
         }
 
@@ -380,14 +372,6 @@ namespace Probe.Engine
                     if (UserSettings.Instance.UseLedIndicator) KeyboardLeds.Set(Keys.Scroll, false);
                     replayFileWatcher.EnableRaisingEvents = true; //watch for replay anyway
                     eventFileWatcher.EnableRaisingEvents = true;
-
-                    if (UserSettings.Instance.StartBulkReplayUpload)
-                    {
-                        AddUniqueAsyncTask(new BulkUploadReplaysTask
-                                               {
-                                                   LastUploadTime = UserSettings.Instance.LastBuldReplayUploadTime
-                                               });
-                    }
                     UIController.SetStateIndicator(ProbeState.Ready);
                     UIController.SetCurrentRace(PlayerRace.Terran); //until we find specific race
                     //test
@@ -498,15 +482,6 @@ namespace Probe.Engine
                     GameDetected = true;
 #endif
                     if (GameClock.Instance.Started) EndRecording();
-                    if (UserSettings.Instance.UploadReplays)
-                    {
-                        replayFileWatcher.EnableRaisingEvents = false;
-                        AddUniqueAsyncTask(new UploadReplayTask
-                                               {
-                                                   ReplayInfo = (ReplayInfo)details,
-                                                   UploadType = UploadReplayTask.ReplayUploadType.CurrentGame
-                                               });
-                    }
                     break;
                 case EventsType.ReplayFileUploaded:
                     replayFileWatcher.EnableRaisingEvents = true;

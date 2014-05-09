@@ -91,7 +91,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ServerCommunicationsTest.cs" />
     <Compile Include="SandBoxTest.cs" />
   </ItemGroup>
   <ItemGroup>

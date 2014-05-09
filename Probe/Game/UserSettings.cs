@@ -91,8 +91,6 @@ namespace Probe.Game
         public DateTime LastBuldReplayUploadTime { get; set; }
         public List<string> UploadReplaysHash { get; set; }
 
-        
-
         public bool SyncronizeOverlaysWithGame { get; private set; }
 
         public bool ShutDownWithSc2 { get; private set; }
@@ -100,7 +98,8 @@ namespace Probe.Game
         public void Load()
         {
             Loaded = false;
-            var j = WebLayer.JSONRequest("get_options", null);
+            var json = File.ReadAllText(Path.Combine(Application.StartupPath, "settings.json"));
+            var j = JObject.Parse(json);
             var jw = new JTokenWrap(j);
             if (!j["success"].Value<bool>()) return;
             Loaded = true;
@@ -252,12 +251,7 @@ namespace Probe.Game
                 }
             }
 
-            //make SC2 keys visible
-            //make SC2 keys visible
-
             ToggleOverlayTransparencyKeyList = new KeyList { Keys.Alt };
-
-            //SC2 bulk upload
 
             StartBulkReplayUpload = false; //
             LastBuldReplayUploadTime = DateTime.MinValue; // file date
@@ -269,7 +263,6 @@ namespace Probe.Game
             NotifyBoosts = true; //todo: option on server
             NotifyBoostsKeys = new KeyList() {Keys.Add};
 #endif
-
             NotifyBoosts = false; //todo: option on server
             NotifyBoostsKeys = new KeyList() { Keys.Add }; //todo: option on server
             CaptureResources = true; //todo: option on server

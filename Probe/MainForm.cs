@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
@@ -191,17 +190,13 @@ namespace Probe
                     break;
                 case EventsType.ConnectingState:
                     StartTrayIconAnimation();
-                    TrayMenuItemConnect.Enabled = false;
                     SetTrayText("connecting...");
                     break;
                 case EventsType.ReadyState:
-                    TrayMenuItemConnect.Visible = false;
                     SetTrayText("ready");
                     break;
                 case EventsType.DisconnectedState:
                     SetErrorTrayIcon();
-                    TrayMenuItemConnect.Enabled = true;
-                    TrayMenuItemConnect.Visible = true;
                     SetTrayText("offline");
                     break;
                 case EventsType.AnotherInstanceExists:
@@ -213,10 +208,8 @@ namespace Probe
                     SetNormalTrayIcon();
                     break;
                 case EventsType.CannotStartSession:
-                    ShowBalloonTip("Click here to connect", BalloonTipActionEnum.Url, WebLayer.GetPredefinedUrl(WebLayer.PredefinedUrl.BindClient));
                     break;
                 case EventsType.SessionOfOtherInstance:
-                    ShowBalloonTip("Another client already uses your account.\r\nClick here to use this", BalloonTipActionEnum.Url, WebLayer.GetPredefinedUrl(WebLayer.PredefinedUrl.ForceOpenClientSession));
                     break;
                 case EventsType.UnexpectedCase:
                     ShowBalloonTip("Unexpected error occurred.\r\nTry to update client");
@@ -254,14 +247,10 @@ namespace Probe
                     ShowBalloonTip("New version has been installed\r\nRestarting...");
                     break;
                 case EventsType.ServerUnavailable:
-                    if (ServerConnection.Instance.ConnectionMode != ServerConnection.ConnectionModeEnum.SilentErrors)
-                        ShowBalloonTip("Server is under maintenance now.\r\nPlease check website for details", BalloonTipActionEnum.Url, WebLayer.GetPredefinedUrl(WebLayer.PredefinedUrl.Root));
                     break;
                 case EventsType.WillRestartForUpdate:
-                    ShowBalloonTip("Application need to restart to apply updates.\r\nPlease wait for a while.", BalloonTipActionEnum.Url, WebLayer.GetPredefinedUrl(WebLayer.PredefinedUrl.Root));
                     break;
                 case EventsType.ClientNeedToBeReinstalled:
-                    ShowBalloonTip("Cannot auto-update\r\nPlease manually install latest version\r\nClick here to download installer", BalloonTipActionEnum.Url, WebLayer.GetPredefinedUrl(WebLayer.PredefinedUrl.DownloadClient));
                     SetTrayText("please reinstall application");
                     break;
                 case EventsType.Message:
@@ -380,22 +369,6 @@ namespace Probe
         {
             if (e.Button != MouseButtons.Left || string.IsNullOrEmpty(trayIcon.BalloonTipText)) return;
             trayIcon.ShowBalloonTip(4000);
-        }
-
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WebLayer.OpenBrowser(WebLayer.PredefinedUrl.Settings);
-        }
-
-        private void contactToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WebLayer.OpenBrowser(WebLayer.GetPredefinedUrl(WebLayer.PredefinedUrl.Contact) + new QueryString().Add("edit[submitted][message]",
-                String.Format(" \r\n-----\r\nProbe: {0} ({1})\r\nOS: {2}\r\nFramework / runtime: {3}/{4}", 
-                Assembly.GetExecutingAssembly().GetName().Version,
-                Settings.Default.InstanceCode, 
-                Environment.OSVersion.VersionString,
-                Program.GetFramevorkVersion(),
-                Environment.Version)));
         }
 
         private void localToolStripMenuItem_Click(object sender, EventArgs e)

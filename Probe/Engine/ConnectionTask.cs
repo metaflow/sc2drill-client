@@ -18,8 +18,6 @@ namespace Probe.Engine
             Success = false;
             if (ServerConnection.Instance.Connected || (ServerConnection.Instance.ConnectionMode == ServerConnection.ConnectionModeEnum.DoNotConnect)) return;
             Success = false;
-            CustomEvents.Instance.CheckErrorLog();
-            Debug.Print("CheckInstanceCode");
             Success = ServerConnection.Instance.CheckInstanceCode();
             Debug.Print("Open session");
             if (Success) Success = ServerConnection.Instance.OpenSession();

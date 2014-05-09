@@ -4,8 +4,6 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
-using Newtonsoft.Json.Linq;
-using Probe.WebClient;
 
 namespace Probe.Utility
 {
@@ -194,30 +192,6 @@ namespace Probe.Utility
             finally
             {
                 _enabled = true;
-            }
-        }
-
-        public void CheckErrorLog()
-        {
-            var path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\error.log";
-            if (File.Exists(path))
-            {
-                var r = new StreamReader(path);
-                try
-                {
-                    var e = r.ReadToEnd();
-                    var c = WebLayer.JSONRequest("offline_exception", new JObject() { { "exception", e } });
-                    if (c["success"].Value<bool>())
-                    {
-                        Add(EventsType.ErrorSentToServer);
-                        r.Close();
-                        File.Delete(path);
-                    }
-                }
-                finally
-                {
-                    r.Close();
-                }
             }
         }
     }

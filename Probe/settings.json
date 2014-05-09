@@ -1,0 +1,36 @@
+{
+    "success" : true,
+    "data": {
+        "settings" : {
+            "speed" : "Faster",
+            "app_control_key" : "Scroll Lock",
+            "recording_sound_notify" : false,
+            "upload_replay" : false,
+            "buttons_overlay" : false,
+            "start_with_anykey" : false,
+            "map" : {
+                "type" : "none",
+                "key" : "Alt",
+                "start" : 600,
+                "notify" : 60,
+                "target" : 30
+            },
+            "resources" : {
+                "type" : "none",
+                "key" : "Alt",
+                "start" : 600,
+                "notify" : 60,
+                "target" : 30
+            },
+            "production" : {
+                "type" : "none",
+                "keys" : ["1", "2", "3"],
+                "start" : 600,
+                "notify" : 60,
+                "target" : 30
+            },
+            "build_orders_ui" : "full",
+            "silent_build_order" : "false",
+        }
+    }
+}

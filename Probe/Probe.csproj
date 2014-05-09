@@ -115,11 +115,8 @@
     <Compile Include="BuildOrders\BuildOrderHandler.cs" />
     <Compile Include="BuildOrders\BuildOrder.cs" />
     <Compile Include="Engine\AsyncTaskProcessor.cs" />
-    <Compile Include="Engine\BulkUploadReplaysTask.cs" />
     <Compile Include="Engine\ConnectionTask.cs" />
     <Compile Include="Engine\SendGameTask.cs" />
-    <Compile Include="Engine\UpdateSessionActivity.cs" />
-    <Compile Include="Engine\UploadReplayTask.cs" />
     <Compile Include="Estimators\BoostNotifier.cs" />
     <Compile Include="FormLocalSettings.cs">
       <SubType>Form</SubType>
@@ -206,12 +203,12 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="sc2keywatcher_TemporaryKey.pfx" />
+    <None Include="settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\About.jpg" />
-    <Content Include="eula.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\probe_dots1.ico" />
     <None Include="Resources\probe_dots2.ico" />
     <None Include="Resources\probe_dots3.ico" />
